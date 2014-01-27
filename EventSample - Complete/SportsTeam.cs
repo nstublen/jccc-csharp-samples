@@ -5,12 +5,14 @@ using System.Text;
 
 namespace EventWalkthrough
 {
+    // Define a class for the event arguments, derived from EventArgs.
     public class RecordChangedEventArgs : EventArgs
     {
         public uint Wins;
         public uint Losses;
     }
 
+    // Declare a delegate type for the event.
     public delegate void RecordChangedEventHandler(object sender, RecordChangedEventArgs e);
 
     public class SportsTeam
@@ -43,6 +45,8 @@ namespace EventWalkthrough
             private set
             {
                 mLosses = value;
+
+                // Raise the event.
                 if (RecordChanged != null)
                 {
                     RecordChanged(this, new RecordChangedEventArgs() { Wins = mWins, Losses = mLosses });
@@ -56,6 +60,8 @@ namespace EventWalkthrough
             private set
             {
                 mWins = value;
+
+                // Raise the event.
                 if (RecordChanged != null)
                 {
                     RecordChanged(this, new RecordChangedEventArgs() { Wins = mWins, Losses = mLosses });
@@ -86,6 +92,7 @@ namespace EventWalkthrough
             Wins++;
         }
 
+        // Declare an event using the delegate type.
         public event RecordChangedEventHandler RecordChanged;
     }
 }
