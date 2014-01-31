@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using System.Xml;
+using System.Text;
 
 namespace JCCC.Samples.CustomerExport
 {
@@ -50,10 +51,18 @@ namespace JCCC.Samples.CustomerExport
                     } // SqlCommand
                 } // SqlConnection
 
+                // Setting a breakpoint on the using statement below,
+                // you can examine the value of "xml" in Visual Studio
+                // to see how data visualizers allow you to get a
+                // customized view of a data value.  "xml" can be
+                // visualized as text, XML, or HTML.
+                byte[] xmlBytes = memoryStream.ToArray();
+                string xml = Encoding.UTF8.GetString(xmlBytes);
+
                 // Dump the MemoryStream to a file.
                 using (FileStream export = new FileStream(xmlFilename, FileMode.Create, FileAccess.Write))
                 {
-                    memoryStream.WriteTo(export);
+                    export.Write(xmlBytes, 0, xmlBytes.Length);
                 }
             } // MemoryStream
         } // Main
