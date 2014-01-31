@@ -1,4 +1,4 @@
-﻿namespace EventWalkthrough
+﻿namespace JCCC.Samples.EventSample
 {
     partial class FormEventSender
     {

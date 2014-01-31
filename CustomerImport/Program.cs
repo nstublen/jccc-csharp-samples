@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace CustomerImport
+namespace JCCC.Samples.CustomerImport
 {
     static class Program
     {

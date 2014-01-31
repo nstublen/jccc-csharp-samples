@@ -8,8 +8,8 @@
     <ProjectGuid>{68D35519-604D-4516-AF4D-3A84E15EA9B2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EventWalkthrough</RootNamespace>
-    <AssemblyName>EventWalkthrough</AssemblyName>
+    <RootNamespace>JCCC.Samples.EventSample</RootNamespace>
+    <AssemblyName>EventSample</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

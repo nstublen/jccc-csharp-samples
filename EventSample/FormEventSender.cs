@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EventWalkthrough
+namespace JCCC.Samples.EventSample
 {
     public partial class FormEventSender : Form
     {

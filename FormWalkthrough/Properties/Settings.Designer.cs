@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FormWalkthrough.Properties {
+namespace JCCC.Samples.FormWalkthrough.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

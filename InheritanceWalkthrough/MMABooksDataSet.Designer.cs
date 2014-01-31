@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace InheritanceWalkthrough {
+namespace JCCC.Samples.InheritanceWalkthrough {
     
     
     /// <summary>
@@ -671,7 +671,7 @@ namespace InheritanceWalkthrough {
         }
     }
 }
-namespace InheritanceWalkthrough.MMABooksDataSetTableAdapters {
+namespace JCCC.Samples.InheritanceWalkthrough.MMABooksDataSetTableAdapters {
     
     
     /// <summary>
@@ -838,7 +838,7 @@ SELECT ProductCode, Description, UnitPrice, OnHandQuantity FROM Products WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::InheritanceWalkthrough.Properties.Settings.Default.MMABooksConnectionString;
+            this._connection.ConnectionString = global::JCCC.Samples.InheritanceWalkthrough.Properties.Settings.Default.MMABooksConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

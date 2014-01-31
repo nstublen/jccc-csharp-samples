@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InheritanceWalkthrough.Properties {
+namespace JCCC.Samples.InheritanceWalkthrough.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

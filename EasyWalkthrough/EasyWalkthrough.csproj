@@ -8,7 +8,7 @@
     <ProjectGuid>{C6D90E79-143C-43D1-8FE1-E168598FC924}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EasyWalkthrough</RootNamespace>
+    <RootNamespace>JCCC.Samples.EasyWalkthrough</RootNamespace>
     <AssemblyName>EasyWalkthrough</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

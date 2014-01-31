@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EventWalkthrough
+namespace JCCC.Samples.EventSample
 {
     // Step 1b: We need to define a class with the event arguments.
 

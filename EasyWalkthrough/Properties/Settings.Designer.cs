@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EasyWalkthrough.Properties {
+namespace JCCC.Samples.EasyWalkthrough.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

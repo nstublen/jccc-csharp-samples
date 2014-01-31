@@ -8,7 +8,7 @@
     <ProjectGuid>{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomerExport</RootNamespace>
+    <RootNamespace>JCCC.Samples.CustomerExport</RootNamespace>
     <AssemblyName>TableExport</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace CustomerImport
+namespace JCCC.Samples.CustomerImport
 {
     public partial class FormCustomerImport : Form
     {

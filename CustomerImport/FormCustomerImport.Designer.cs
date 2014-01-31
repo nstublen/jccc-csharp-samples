@@ -1,4 +1,4 @@
-﻿namespace CustomerImport
+﻿namespace JCCC.Samples.CustomerImport
 {
     partial class FormCustomerImport
     {

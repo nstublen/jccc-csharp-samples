@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EventWalkthrough
+namespace JCCC.Samples.EventSample
 {
     // Define a class for the event arguments, derived from EventArgs.
     public class RecordChangedEventArgs : EventArgs

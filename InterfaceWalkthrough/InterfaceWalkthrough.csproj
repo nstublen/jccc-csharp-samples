@@ -8,7 +8,7 @@
     <ProjectGuid>{C7141AE2-530A-4964-BF16-AF00F18E336A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InterfaceWalkthrough</RootNamespace>
+    <RootNamespace>JCCC.Samples.InterfaceWalkthrough</RootNamespace>
     <AssemblyName>InterfaceWalkthrough</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

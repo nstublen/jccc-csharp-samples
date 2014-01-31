@@ -8,7 +8,7 @@
     <ProjectGuid>{63DF7C3A-7F83-4579-BFE1-B72FC1593E3B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FormWalkthrough</RootNamespace>
+    <RootNamespace>JCCC.Samples.FormWalkthrough</RootNamespace>
     <AssemblyName>FormWalkthrough</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
