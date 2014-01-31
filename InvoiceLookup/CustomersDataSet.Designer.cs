@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WindowsFormsApplication1 {
+namespace JCCC.Samples.InvoiceLookup {
     
     
     /// <summary>
@@ -1275,7 +1275,7 @@ namespace WindowsFormsApplication1 {
         }
     }
 }
-namespace WindowsFormsApplication1.CustomersDataSetTableAdapters {
+namespace JCCC.Samples.InvoiceLookup.CustomersDataSetTableAdapters {
     
     
     /// <summary>
@@ -1453,7 +1453,7 @@ SELECT CustomerID, Name, Address, City, State, ZipCode FROM Customers WHERE (Cus
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApplication1.Properties.Settings.Default.MMABooksConnectionString;
+            this._connection.ConnectionString = global::JCCC.Samples.InvoiceLookup.Properties.Settings.Default.MMABooksConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1891,7 +1891,7 @@ SELECT InvoiceID, CustomerID, InvoiceDate, ProductTotal, SalesTax, Shipping, Inv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApplication1.Properties.Settings.Default.MMABooksConnectionString;
+            this._connection.ConnectionString = global::JCCC.Samples.InvoiceLookup.Properties.Settings.Default.MMABooksConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

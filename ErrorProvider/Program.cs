@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace JCCC.Samples.InvoiceLookup
+namespace JCCC.Samples.ErrorProvider
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace JCCC.Samples.InvoiceLookup
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInvoiceLookup());
+            Application.Run(new FormMasterDetail());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace JCCC.Samples.InvoiceLookup
 {
     partial class FormInvoiceLookup
     {
@@ -56,11 +56,11 @@
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.zipCodeTextBox = new System.Windows.Forms.TextBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersDataSet = new WindowsFormsApplication1.CustomersDataSet();
-            this.customersTableAdapter = new WindowsFormsApplication1.CustomersDataSetTableAdapters.CustomersTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApplication1.CustomersDataSetTableAdapters.TableAdapterManager();
+            this.customersDataSet = new JCCC.Samples.InvoiceLookup.CustomersDataSet();
+            this.customersTableAdapter = new JCCC.Samples.InvoiceLookup.CustomersDataSetTableAdapters.CustomersTableAdapter();
+            this.tableAdapterManager = new JCCC.Samples.InvoiceLookup.CustomersDataSetTableAdapters.TableAdapterManager();
             this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invoicesTableAdapter = new WindowsFormsApplication1.CustomersDataSetTableAdapters.InvoicesTableAdapter();
+            this.invoicesTableAdapter = new JCCC.Samples.InvoiceLookup.CustomersDataSetTableAdapters.InvoicesTableAdapter();
             this.invoicesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -340,7 +340,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
             this.tableAdapterManager.InvoicesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = JCCC.Samples.InvoiceLookup.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // invoicesBindingSource
             // 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JCCC.Samples.InvoiceLookup.Properties {
+namespace JCCC.Samples.ErrorProvider.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

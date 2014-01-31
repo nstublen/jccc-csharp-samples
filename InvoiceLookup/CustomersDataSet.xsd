@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MMABooksConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MMABooksConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.MMABooksConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MMABooksConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MMABooksConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JCCC.Samples.InvoiceLookup.Properties.Settings.GlobalReference.Default.MMABooksConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomersTableAdapter" GeneratorDataComponentClassName="CustomersTableAdapter" Name="Customers" UserDataComponentName="CustomersTableAdapter">
@@ -158,7 +158,7 @@ SELECT InvoiceID, CustomerID, InvoiceDate, ProductTotal, SalesTax, Shipping, Inv
   <xs:element name="CustomersDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CustomersDataSet" msprop:Generator_UserDSName="CustomersDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Customers" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_TablePropName="Customers" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_RowClassName="CustomersRow" msprop:Generator_UserTableName="Customers" msprop:Generator_RowEvArgName="CustomersRowChangeEvent">
+        <xs:element name="Customers" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_TablePropName="Customers" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_UserTableName="Customers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_RowEvArgName="CustomersRowChangeEvent" msprop:Generator_RowClassName="CustomersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
@@ -200,7 +200,7 @@ SELECT InvoiceID, CustomerID, InvoiceDate, ProductTotal, SalesTax, Shipping, Inv
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Invoices" msprop:Generator_TableClassName="InvoicesDataTable" msprop:Generator_TableVarName="tableInvoices" msprop:Generator_RowChangedName="InvoicesRowChanged" msprop:Generator_TablePropName="Invoices" msprop:Generator_RowDeletingName="InvoicesRowDeleting" msprop:Generator_RowChangingName="InvoicesRowChanging" msprop:Generator_RowEvHandlerName="InvoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoicesRowDeleted" msprop:Generator_RowClassName="InvoicesRow" msprop:Generator_UserTableName="Invoices" msprop:Generator_RowEvArgName="InvoicesRowChangeEvent">
+        <xs:element name="Invoices" msprop:Generator_TableClassName="InvoicesDataTable" msprop:Generator_TableVarName="tableInvoices" msprop:Generator_TablePropName="Invoices" msprop:Generator_RowDeletingName="InvoicesRowDeleting" msprop:Generator_RowChangingName="InvoicesRowChanging" msprop:Generator_RowEvHandlerName="InvoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoicesRowDeleted" msprop:Generator_UserTableName="Invoices" msprop:Generator_RowChangedName="InvoicesRowChanged" msprop:Generator_RowEvArgName="InvoicesRowChangeEvent" msprop:Generator_RowClassName="InvoicesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="InvoiceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnInvoiceID" msprop:Generator_ColumnPropNameInRow="InvoiceID" msprop:Generator_ColumnPropNameInTable="InvoiceIDColumn" msprop:Generator_UserColumnName="InvoiceID" type="xs:int" />
@@ -226,7 +226,7 @@ SELECT InvoiceID, CustomerID, InvoiceDate, ProductTotal, SalesTax, Shipping, Inv
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Invoices_Customers" msdata:parent="Customers" msdata:child="Invoices" msdata:parentkey="CustomerID" msdata:childkey="CustomerID" msprop:Generator_UserChildTable="Invoices" msprop:Generator_ChildPropName="GetInvoicesRows" msprop:Generator_UserRelationName="FK_Invoices_Customers" msprop:Generator_RelationVarName="relationFK_Invoices_Customers" msprop:Generator_UserParentTable="Customers" msprop:Generator_ParentPropName="CustomersRow" />
+      <msdata:Relationship name="FK_Invoices_Customers" msdata:parent="Customers" msdata:child="Invoices" msdata:parentkey="CustomerID" msdata:childkey="CustomerID" msprop:Generator_UserChildTable="Invoices" msprop:Generator_ChildPropName="GetInvoicesRows" msprop:Generator_UserRelationName="FK_Invoices_Customers" msprop:Generator_ParentPropName="CustomersRow" msprop:Generator_RelationVarName="relationFK_Invoices_Customers" msprop:Generator_UserParentTable="Customers" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

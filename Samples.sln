@@ -25,8 +25,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerImport", "CustomerI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerLinq", "CustomerExportSerializer\CustomerLinq.csproj", "{8BF26041-0A95-460C-8C8B-F78117DADFF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorProvider", "WindowsFormsApplication4\ErrorProvider.csproj", "{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSample", "WindowsFormsApplication5\LinqSample.csproj", "{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML", "XML", "{D234A7FE-AF71-4489-B20D-0F40A8D777DE}"
@@ -42,6 +40,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileStreams", "FileStreams", "{5C46D3FE-F1A2-4437-9ADF-9BFB01508626}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerExport", "CustomerExport\CustomerExport.csproj", "{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorProvider", "ErrorProvider\ErrorProvider.csproj", "{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,16 +173,6 @@ Global
 		{8BF26041-0A95-460C-8C8B-F78117DADFF3}.Release|Mixed Platforms.Build.0 = Release|x86
 		{8BF26041-0A95-460C-8C8B-F78117DADFF3}.Release|x86.ActiveCfg = Release|x86
 		{8BF26041-0A95-460C-8C8B-F78117DADFF3}.Release|x86.Build.0 = Release|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|x86.ActiveCfg = Debug|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|x86.Build.0 = Debug|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|Any CPU.ActiveCfg = Release|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|Mixed Platforms.Build.0 = Release|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|x86.ActiveCfg = Release|x86
-		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|x86.Build.0 = Release|x86
 		{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -203,6 +193,16 @@ Global
 		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Mixed Platforms.Build.0 = Release|x86
 		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|x86.ActiveCfg = Release|x86
 		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|x86.Build.0 = Release|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|x86.ActiveCfg = Debug|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Debug|x86.Build.0 = Debug|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|Any CPU.ActiveCfg = Release|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|x86.ActiveCfg = Release|x86
+		{A9148E1D-AE5E-41FC-AE92-A51A96AB6C48}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
