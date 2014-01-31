@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CustomerRecords {
+namespace JCCC.Samples.CustomerRecords {
     
     
     /// <summary>
@@ -730,7 +730,7 @@ namespace CustomerRecords {
         }
     }
 }
-namespace CustomerRecords.CustomersDataSetTableAdapters {
+namespace JCCC.Samples.CustomerRecords.CustomersDataSetTableAdapters {
     
     
     /// <summary>
@@ -907,7 +907,7 @@ SELECT CustomerID, Name, Address, City, State, ZipCode FROM Customers WHERE (Cus
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CustomerRecords.Properties.Settings.Default.MMABooksConnectionString;
+            this._connection.ConnectionString = global::JCCC.Samples.CustomerRecords.Properties.Settings.Default.MMABooksConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

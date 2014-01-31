@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CustomerRecords.Properties {
+namespace JCCC.Samples.CustomerRecords.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

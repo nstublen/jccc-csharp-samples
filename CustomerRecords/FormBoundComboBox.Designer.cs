@@ -1,6 +1,6 @@
-﻿namespace CustomerRecords
+﻿namespace JCCC.Samples.CustomerRecords
 {
-    partial class Form1
+    partial class FormBoundComboBox
     {
         /// <summary>
         /// Required designer variable.
@@ -35,11 +35,11 @@
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label stateLabel;
             System.Windows.Forms.Label zipCodeLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.customersDataSet = new CustomerRecords.CustomersDataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBoundComboBox));
+            this.customersDataSet = new JCCC.Samples.CustomerRecords.CustomersDataSet();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersTableAdapter = new CustomerRecords.CustomersDataSetTableAdapters.CustomersTableAdapter();
-            this.tableAdapterManager = new CustomerRecords.CustomersDataSetTableAdapters.TableAdapterManager();
+            this.customersTableAdapter = new JCCC.Samples.CustomerRecords.CustomersDataSetTableAdapters.CustomersTableAdapter();
+            this.tableAdapterManager = new JCCC.Samples.CustomerRecords.CustomersDataSetTableAdapters.TableAdapterManager();
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -59,9 +59,9 @@
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.stateComboBox = new System.Windows.Forms.ComboBox();
             this.statesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statesDataSet = new CustomerRecords.StatesDataSet();
+            this.statesDataSet = new JCCC.Samples.CustomerRecords.StatesDataSet();
             this.zipCodeTextBox = new System.Windows.Forms.TextBox();
-            this.statesTableAdapter = new CustomerRecords.StatesDataSetTableAdapters.StatesTableAdapter();
+            this.statesTableAdapter = new JCCC.Samples.CustomerRecords.StatesDataSetTableAdapters.StatesTableAdapter();
             customerIDLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -148,7 +148,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = CustomerRecords.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = JCCC.Samples.CustomerRecords.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // customersBindingNavigator
             // 
@@ -361,7 +361,7 @@
             this.Controls.Add(this.customersBindingNavigator);
             this.Name = "Form1";
             this.Text = "Customer Records";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FormBoundComboBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();

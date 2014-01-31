@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MMABooksConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MMABooksConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CustomerRecords.Properties.Settings.GlobalReference.Default.MMABooksConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MMABooksConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MMABooksConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JCCC.Samples.CustomerRecords.Properties.Settings.GlobalReference.Default.MMABooksConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StatesTableAdapter" GeneratorDataComponentClassName="StatesTableAdapter" Name="States" UserDataComponentName="StatesTableAdapter">
@@ -63,7 +63,7 @@ SELECT StateCode, StateName FROM States WHERE (StateCode = @StateCode)</CommandT
   <xs:element name="StatesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StatesDataSet" msprop:Generator_UserDSName="StatesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="States" msprop:Generator_TableClassName="StatesDataTable" msprop:Generator_TableVarName="tableStates" msprop:Generator_TablePropName="States" msprop:Generator_RowDeletingName="StatesRowDeleting" msprop:Generator_RowChangingName="StatesRowChanging" msprop:Generator_RowEvHandlerName="StatesRowChangeEventHandler" msprop:Generator_RowDeletedName="StatesRowDeleted" msprop:Generator_UserTableName="States" msprop:Generator_RowChangedName="StatesRowChanged" msprop:Generator_RowEvArgName="StatesRowChangeEvent" msprop:Generator_RowClassName="StatesRow">
+        <xs:element name="States" msprop:Generator_TableClassName="StatesDataTable" msprop:Generator_TableVarName="tableStates" msprop:Generator_RowChangedName="StatesRowChanged" msprop:Generator_TablePropName="States" msprop:Generator_RowDeletingName="StatesRowDeleting" msprop:Generator_RowChangingName="StatesRowChanging" msprop:Generator_RowEvHandlerName="StatesRowChangeEventHandler" msprop:Generator_RowDeletedName="StatesRowDeleted" msprop:Generator_RowClassName="StatesRow" msprop:Generator_UserTableName="States" msprop:Generator_RowEvArgName="StatesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="StateCode" msprop:Generator_ColumnVarNameInTable="columnStateCode" msprop:Generator_ColumnPropNameInRow="StateCode" msprop:Generator_ColumnPropNameInTable="StateCodeColumn" msprop:Generator_UserColumnName="StateCode">
