@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA895C54-6FBD-4151-9F1A-76889624D075}</ProjectGuid>
+    <ProjectGuid>{5B465C41-F6CE-432C-A8C0-6911B1CF8D80}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InheritanceWalkthrough</RootNamespace>
-    <AssemblyName>InheritanceWalkthrough</AssemblyName>
+    <RootNamespace>CustomerImport</RootNamespace>
+    <AssemblyName>CustomerImport</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -46,16 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="MMABooksDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MMABooksDataSet.xsd</DependentUpon>
+    <Compile Include="FormCustomerImport.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Movie.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="FormCustomerImport.Designer.cs">
+      <DependentUpon>FormCustomerImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCustomerImport.resx">
+      <DependentUpon>FormCustomerImport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,18 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="app.config" />
-    <None Include="MMABooksDataSet.xsc">
-      <DependentUpon>MMABooksDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MMABooksDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MMABooksDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MMABooksDataSet.xss">
-      <DependentUpon>MMABooksDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
