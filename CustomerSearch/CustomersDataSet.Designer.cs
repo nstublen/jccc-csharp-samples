@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CustomerSearch {
+namespace JCCC.Samples.CustomerSearch {
     
     
     /// <summary>
@@ -730,7 +730,7 @@ namespace CustomerSearch {
         }
     }
 }
-namespace CustomerSearch.CustomersDataSetTableAdapters {
+namespace JCCC.Samples.CustomerSearch.CustomersDataSetTableAdapters {
     
     
     /// <summary>
@@ -908,7 +908,7 @@ SELECT CustomerID, Name, Address, City, State, ZipCode FROM Customers WHERE (Cus
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CustomerSearch.Properties.Settings.Default.MMABooksConnectionString;
+            this._connection.ConnectionString = global::JCCC.Samples.CustomerSearch.Properties.Settings.Default.MMABooksConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -932,7 +932,7 @@ SELECT CustomerID, Name, Address, City, State, ZipCode FROM Customers WHERE (Cus
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CustomersDataSet.CustomersDataTable dataTable, string Name) {
+        public virtual int FillByName(CustomersDataSet.CustomersDataTable dataTable, string Name) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
@@ -951,7 +951,7 @@ SELECT CustomerID, Name, Address, City, State, ZipCode FROM Customers WHERE (Cus
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CustomersDataSet.CustomersDataTable GetData(string Name) {
+        public virtual CustomersDataSet.CustomersDataTable GetDataByName(string Name) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");

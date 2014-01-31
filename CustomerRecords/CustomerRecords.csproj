@@ -8,7 +8,7 @@
     <ProjectGuid>{D18906AF-45BF-4065-B98A-587C3454EC92}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomerRecords</RootNamespace>
+    <RootNamespace>JCCC.Samples.CustomerRecords</RootNamespace>
     <AssemblyName>CustomerRecords</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -51,11 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomersDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormBoundComboBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormBoundComboBox.Designer.cs">
+      <DependentUpon>FormBoundComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,8 +64,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StatesDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormBoundComboBox.resx">
+      <DependentUpon>FormBoundComboBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="CustomersDataSet.xsc">

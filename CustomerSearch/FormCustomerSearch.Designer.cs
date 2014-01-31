@@ -1,4 +1,4 @@
-﻿namespace CustomerSearch
+﻿namespace JCCC.Samples.CustomerSearch
 {
     partial class FormCustomerSearch
     {
@@ -31,22 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomerSearch));
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersDataSet = new JCCC.Samples.CustomerSearch.CustomersDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.fillToolStrip = new System.Windows.Forms.ToolStrip();
             this.nameToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.nameToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.getAllToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,17 +57,14 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersDataSet = new CustomerSearch.CustomersDataSet();
-            this.customersTableAdapter = new CustomerSearch.CustomersDataSetTableAdapters.CustomersTableAdapter();
-            this.tableAdapterManager = new CustomerSearch.CustomersDataSetTableAdapters.TableAdapterManager();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.customersTableAdapter = new JCCC.Samples.CustomerSearch.CustomersDataSetTableAdapters.CustomersTableAdapter();
+            this.tableAdapterManager = new JCCC.Samples.CustomerSearch.CustomersDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
             this.customersBindingNavigator.SuspendLayout();
-            this.fillToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersDataSet)).BeginInit();
+            this.fillToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // customersBindingNavigator
@@ -96,6 +96,41 @@
             this.customersBindingNavigator.Size = new System.Drawing.Size(380, 25);
             this.customersBindingNavigator.TabIndex = 0;
             this.customersBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this.customersDataSet;
+            // 
+            // customersDataSet
+            // 
+            this.customersDataSet.DataSetName = "CustomersDataSet";
+            this.customersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -129,16 +164,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -161,26 +189,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // customersBindingNavigatorSaveItem
             // 
@@ -197,7 +207,7 @@
             this.nameToolStripLabel,
             this.nameToolStripTextBox,
             this.fillToolStripButton,
-            this.toolStripButton1});
+            this.getAllToolStripButton});
             this.fillToolStrip.Location = new System.Drawing.Point(0, 25);
             this.fillToolStrip.Name = "fillToolStrip";
             this.fillToolStrip.Size = new System.Drawing.Size(380, 25);
@@ -223,6 +233,14 @@
             this.fillToolStripButton.Text = "Fill";
             this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
             // 
+            // getAllToolStripButton
+            // 
+            this.getAllToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.getAllToolStripButton.Name = "getAllToolStripButton";
+            this.getAllToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.getAllToolStripButton.Text = "Get All";
+            this.getAllToolStripButton.Click += new System.EventHandler(this.getAllToolStripButton_Click);
+            // 
             // customersDataGridView
             // 
             this.customersDataGridView.AutoGenerateColumns = false;
@@ -235,9 +253,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.customersDataGridView.DataSource = this.customersBindingSource;
-            this.customersDataGridView.Location = new System.Drawing.Point(30, 106);
+            this.customersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customersDataGridView.Location = new System.Drawing.Point(0, 50);
             this.customersDataGridView.Name = "customersDataGridView";
-            this.customersDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.customersDataGridView.Size = new System.Drawing.Size(380, 232);
             this.customersDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -277,16 +296,6 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "ZipCode";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataMember = "Customers";
-            this.customersBindingSource.DataSource = this.customersDataSet;
-            // 
-            // customersDataSet
-            // 
-            this.customersDataSet.DataSetName = "CustomersDataSet";
-            this.customersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // customersTableAdapter
             // 
             this.customersTableAdapter.ClearBeforeFill = true;
@@ -295,21 +304,13 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = CustomerSearch.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButton1.Text = "Get All";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.tableAdapterManager.UpdateOrder = JCCC.Samples.CustomerSearch.CustomersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // FormCustomerSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 474);
+            this.ClientSize = new System.Drawing.Size(380, 282);
             this.Controls.Add(this.customersDataGridView);
             this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.customersBindingNavigator);
@@ -318,11 +319,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();
             this.customersBindingNavigator.ResumeLayout(false);
             this.customersBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersDataSet)).EndInit();
             this.fillToolStrip.ResumeLayout(false);
             this.fillToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,7 +359,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton getAllToolStripButton;
     }
 }
 

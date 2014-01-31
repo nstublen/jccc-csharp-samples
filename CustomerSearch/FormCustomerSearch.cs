@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CustomerSearch
+namespace JCCC.Samples.CustomerSearch
 {
     public partial class FormCustomerSearch : Form
     {
@@ -28,7 +28,7 @@ namespace CustomerSearch
         {
             try
             {
-                this.customersTableAdapter.Fill(this.customersDataSet.Customers, nameToolStripTextBox.Text + '%');
+                this.customersTableAdapter.FillByName(this.customersDataSet.Customers, nameToolStripTextBox.Text + '%');
             }
             catch (System.Exception ex)
             {
@@ -37,7 +37,7 @@ namespace CustomerSearch
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void getAllToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {

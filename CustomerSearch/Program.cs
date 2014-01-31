@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace CustomerSearch
+namespace JCCC.Samples.CustomerSearch
 {
     static class Program
     {

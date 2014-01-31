@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CustomerSearch
+namespace JCCC.Samples.CustomerSearch
 {
     public partial class FormCustomerList : Form
     {
