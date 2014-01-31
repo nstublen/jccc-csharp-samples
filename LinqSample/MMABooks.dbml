@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MMABooks" Class="MMABooksDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=MMABooks;Integrated Security=True" SettingsObjectName="JCCC.Samples.LinqSample.Properties.Settings" SettingsPropertyName="MMABooksConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.States" Member="States">
+    <Type Name="State">
+      <Column Name="StateCode" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="State_Customer" Member="Customers" ThisKey="StateCode" OtherKey="State" Type="Customer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ZipCode" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Invoice" Member="Invoices" ThisKey="CustomerID" OtherKey="CustomerID" Type="Invoice" />
+      <Association Name="State_Customer" Member="State1" ThisKey="State" OtherKey="StateCode" Type="State" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceLineItems" Member="InvoiceLineItems">
+    <Type Name="InvoiceLineItem">
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Invoice_InvoiceLineItem" Member="Invoice" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="Invoice" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Product_InvoiceLineItem" Member="Product" ThisKey="ProductCode" OtherKey="ProductCode" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Invoices" Member="Invoices">
+    <Type Name="Invoice">
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProductTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SalesTax" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Shipping" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Invoice_InvoiceLineItem" Member="InvoiceLineItems" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceLineItem" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderOptions" Member="OrderOptions">
+    <Type Name="OrderOption">
+      <Column Name="SalesTaxRate" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstBookShipCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AdditionalBookShipCharge" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="OnHandQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_InvoiceLineItem" Member="InvoiceLineItems" ThisKey="ProductCode" OtherKey="ProductCode" Type="InvoiceLineItem" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="MMABooks">
+  <DataContextMoniker Name="/MMABooksDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f5026f6e-dcf2-4571-b257-7fd8d834284b" absoluteBounds="0.75, 1.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MMABooksDataContext/State" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3be51de7-4be2-480e-8e98-2b4d6c9084e5" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c89a46f7-c5e4-4f1c-ba06-23b9d7e326ff" absoluteBounds="3.5, 1, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/MMABooksDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00d565c9-3348-46da-b11b-b1561aeacf31" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd61f0c9-5cb1-4d42-bce2-48c28d62b737" absoluteBounds="9, 1.125, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/MMABooksDataContext/InvoiceLineItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f926caa2-759d-4c01-837c-2c126f6a5b7a" absoluteBounds="9.015, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77d27c2b-0a6a-4b46-bcc9-0c30bb4db8a8" absoluteBounds="6.25, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MMABooksDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76e78d59-66bb-4b06-8121-99ecc8f9d05f" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd487122-9c18-4382-a516-326d188afbd7" absoluteBounds="0.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MMABooksDataContext/OrderOption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a0d6a8a-d847-4276-9312-b2f44a348c28" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="671ec027-8775-418e-a3dd-3a817c203edf" absoluteBounds="6.25, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MMABooksDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2a69a8d-1855-45ba-a991-aedd7a4f072b" absoluteBounds="6.265, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MMABooksDataContext/State/State_Customer" />
+      <nodes>
+        <classShapeMoniker Id="f5026f6e-dcf2-4571-b257-7fd8d834284b" />
+        <classShapeMoniker Id="c89a46f7-c5e4-4f1c-ba06-23b9d7e326ff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.01044840494792); (9 : 2.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MMABooksDataContext/Invoice/Invoice_InvoiceLineItem" />
+      <nodes>
+        <classShapeMoniker Id="77d27c2b-0a6a-4b46-bcc9-0c30bb4db8a8" />
+        <classShapeMoniker Id="fd61f0c9-5cb1-4d42-bce2-48c28d62b737" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.98159912109375); (6.25 : 1.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MMABooksDataContext/Customer/Customer_Invoice" />
+      <nodes>
+        <classShapeMoniker Id="c89a46f7-c5e4-4f1c-ba06-23b9d7e326ff" />
+        <classShapeMoniker Id="77d27c2b-0a6a-4b46-bcc9-0c30bb4db8a8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.03929768880208); (10 : 6.03929768880208); (10 : 2.89589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MMABooksDataContext/Product/Product_InvoiceLineItem" />
+      <nodes>
+        <classShapeMoniker Id="671ec027-8775-418e-a3dd-3a817c203edf" />
+        <classShapeMoniker Id="fd61f0c9-5cb1-4d42-bce2-48c28d62b737" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
