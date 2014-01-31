@@ -7,7 +7,7 @@ using System.Data;
 using System.IO;
 using System.Xml;
 
-namespace CustomerExport
+namespace JCCC.Samples.CustomerExport
 {
     static class Program
     {
@@ -17,65 +17,85 @@ namespace CustomerExport
         [STAThread]
         static void Main()
         {
-            using (MemoryStream stringWriter = new MemoryStream())
-            {
-                XmlWriterSettings settings = new XmlWriterSettings();
-                settings.Indent = true;
-                settings.IndentChars = "  ";
-                settings.Encoding = System.Text.Encoding.UTF8;
+            // Dump the Customers.xml file to the desktop.
+            string xmlFilename = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            xmlFilename = Path.Combine(xmlFilename, "Customers.xml");
 
-                using (XmlWriter writer = XmlWriter.Create(stringWriter, settings))
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.IndentChars = "  ";
+            settings.Encoding = System.Text.Encoding.UTF8;
+
+            // Write the XML to a memory buffer. When we're done,
+            // we'll dump the memory buffer into a file.
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                string cxnString = "Data Source=.\\SQLEXPRESS;"
+                    + "Initial Catalog=MMABooks;"
+                    + "Integrated Security=True;";
+                using (SqlConnection cxn = new SqlConnection(cxnString))
                 {
-                    string cxnString = "Data Source=.\\SQLEXPRESS;"
-                        + "Initial Catalog=MMABooks;"
-                        + "Integrated Security=True;";
-                    using (SqlConnection cxn = new SqlConnection(cxnString))
+                    string select = "SELECT * FROM Customers ORDER BY Name";
+                    using (SqlCommand cmd = new SqlCommand(select, cxn))
                     {
                         cxn.Open();
-
-                        writer.WriteStartDocument();
-
-                        string select = "SELECT * FROM Customers ORDER BY Name";
-                        using (SqlCommand cmd = new SqlCommand(select, cxn))
+                        using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection))
                         {
-                            using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+                            using (XmlWriter writer = XmlWriter.Create(memoryStream, settings))
                             {
-                                writer.WriteStartElement("Customers");
+                                writer.WriteStartDocument();
+                                WriteCustomers(reader, writer);
+                            } // XmlWriter
+                        } // SqlDataReader
+                    } // SqlCommand
+                } // SqlConnection
 
-                                while (reader.Read())
-                                {
-                                    writer.WriteStartElement("Customer");
-
-                                    int idColumn = reader.GetOrdinal("CustomerID");
-                                    int id = reader.GetInt32(idColumn);
-                                    writer.WriteAttributeString("id", id.ToString());
-
-                                    for (int column = 0; column < reader.FieldCount; ++column)
-                                    {
-                                        if (column == idColumn)
-                                            continue;
-                                        string name = reader.GetName(column);
-                                        string value = reader.GetSqlValue(column).ToString();
-
-                                        writer.WriteElementString(name, value);
-                                    }
-
-                                    writer.WriteEndElement();
-                                }
-
-                                writer.WriteEndElement();
-                            } // SqlDataReader
-                        } // SqlCommand
-                    } // SqlConnection
-                } // XmlWriter
-
-                // Dump the XML string to a file on the desktop.
-                string path = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                using (FileStream export = new FileStream(path + "\\Customers.xml", FileMode.Create, FileAccess.Write))
+                // Dump the MemoryStream to a file.
+                using (FileStream export = new FileStream(xmlFilename, FileMode.Create, FileAccess.Write))
                 {
-                    stringWriter.WriteTo(export);
+                    memoryStream.WriteTo(export);
                 }
             } // MemoryStream
+        } // Main
+
+        /// <summary>
+        /// Loop through the SqlDataReader and write each Customer
+        /// record to the XMLWriter.
+        /// </summary>
+        /// <param name="inReader">The SqlDataReader that contains
+        /// the query results from a Customer table.</param>
+        /// <param name="inWriter">The XmlWriter that will receive
+        /// the XML-formatter Customer records.</param>
+        private static void WriteCustomers(SqlDataReader inReader, XmlWriter inWriter)
+        {
+            inWriter.WriteStartElement("Customers");
+
+            while (inReader.Read())
+            {
+                inWriter.WriteStartElement("Customer");
+
+                // Find the CustomerID column and use its
+                // value as the "id" attribute.
+                int idColumn = inReader.GetOrdinal("CustomerID");
+                int id = inReader.GetInt32(idColumn);
+                inWriter.WriteAttributeString("id", id.ToString());
+
+                // All the other columns are child elements
+                // of the Customer element.
+                for (int column = 0; column < inReader.FieldCount; ++column)
+                {
+                    if (column == idColumn)
+                        continue;
+                    string name = inReader.GetName(column);
+                    string value = inReader.GetSqlValue(column).ToString();
+
+                    inWriter.WriteElementString(name, value);
+                }
+
+                inWriter.WriteEndElement();
+            }
+
+            inWriter.WriteEndElement();
         }
-    }
+    } // class Program
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CustomerExport.Properties {
+namespace JCCC.Samples.CustomerExport.Properties {
     using System;
     
     

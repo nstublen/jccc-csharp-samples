@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceWalkthrough", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextReader", "WindowsFormsApplication3\TextReader.csproj", "{67371879-E448-4FB9-B6CC-15C1DAB924F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerExport", "TableExport\CustomerExport.csproj", "{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRecords", "CustomerRecords\CustomerRecords.csproj", "{D18906AF-45BF-4065-B98A-587C3454EC92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerSearch", "CustomerSearch\CustomerSearch.csproj", "{BEA59554-CE0B-4260-ABA2-6667A61BA04B}"
@@ -42,6 +40,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{36A60827-D8C5-4411-B530-235B52CB3902}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileStreams", "FileStreams", "{5C46D3FE-F1A2-4437-9ADF-9BFB01508626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerExport", "CustomerExport\CustomerExport.csproj", "{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,16 +123,6 @@ Global
 		{67371879-E448-4FB9-B6CC-15C1DAB924F5}.Release|Mixed Platforms.Build.0 = Release|x86
 		{67371879-E448-4FB9-B6CC-15C1DAB924F5}.Release|x86.ActiveCfg = Release|x86
 		{67371879-E448-4FB9-B6CC-15C1DAB924F5}.Release|x86.Build.0 = Release|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|x86.ActiveCfg = Debug|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|x86.Build.0 = Debug|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Any CPU.ActiveCfg = Release|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Mixed Platforms.Build.0 = Release|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|x86.ActiveCfg = Release|x86
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|x86.Build.0 = Release|x86
 		{D18906AF-45BF-4065-B98A-587C3454EC92}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{D18906AF-45BF-4065-B98A-587C3454EC92}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{D18906AF-45BF-4065-B98A-587C3454EC92}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -203,13 +193,23 @@ Global
 		{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}.Release|x86.ActiveCfg = Release|x86
 		{E380C688-0EA5-46F4-8BDF-5879FAA34CE3}.Release|x86.Build.0 = Release|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|x86.ActiveCfg = Debug|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Debug|x86.Build.0 = Debug|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Any CPU.ActiveCfg = Release|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|Mixed Platforms.Build.0 = Release|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|x86.ActiveCfg = Release|x86
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB} = {D234A7FE-AF71-4489-B20D-0F40A8D777DE}
 		{5B465C41-F6CE-432C-A8C0-6911B1CF8D80} = {D234A7FE-AF71-4489-B20D-0F40A8D777DE}
+		{BD4C762F-CAC5-4CCC-A77F-2BBEFE1C8CCB} = {D234A7FE-AF71-4489-B20D-0F40A8D777DE}
 		{D18906AF-45BF-4065-B98A-587C3454EC92} = {0DB6CA11-0F2B-475C-97FA-68CD7603D6CE}
 		{BEA59554-CE0B-4260-ABA2-6667A61BA04B} = {0DB6CA11-0F2B-475C-97FA-68CD7603D6CE}
 		{7361687A-CA31-4D33-B236-4D06A0029A79} = {0DB6CA11-0F2B-475C-97FA-68CD7603D6CE}
