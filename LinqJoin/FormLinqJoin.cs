@@ -16,6 +16,11 @@ namespace JCCC.Samples.LinqJoin
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Initialize the form by loading customer/invoice records.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormLinqJoin_Load(object sender, EventArgs e)
         {
             CustomerInvoicesDataContext db = new CustomerInvoicesDataContext();

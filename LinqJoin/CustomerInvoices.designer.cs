@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LinqJoin
+namespace JCCC.Samples.LinqJoin
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

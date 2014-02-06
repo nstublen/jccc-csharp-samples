@@ -40,7 +40,7 @@ namespace JCCC.Samples.CustomerImport
                 if (reader.ReadToDescendant("Customer"))
                 {
                     // We should now be at the Customer node (or
-                    // there is no Cusomters node).
+                    // there is no Customers node).
                     do
                     {
                         Console.WriteLine("NodeType: {0}, Name: {1}, Value: {2}", reader.NodeType.ToString(), reader.Name, reader.Value);
