@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CustomerInvoices">
+  <DataContextMoniker Name="/CustomerInvoicesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="79af74b1-aed5-44ed-a3ab-e3d981deef4e" absoluteBounds="0.625, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CustomerInvoicesDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ba84fb6-06fe-46d5-b322-c3c002c99a8e" absoluteBounds="0.64, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13140a03-ae37-4cfb-9842-364a70072d56" absoluteBounds="3, 1, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CustomerInvoicesDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="849063fd-01a0-49ef-b395-389e1762a2fc" absoluteBounds="3.015, 1.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 2.10659912109375); (3 : 2.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CustomerInvoicesDataContext/Customer/Customer_Invoice" />
+      <nodes>
+        <classShapeMoniker Id="79af74b1-aed5-44ed-a3ab-e3d981deef4e" />
+        <classShapeMoniker Id="13140a03-ae37-4cfb-9842-364a70072d56" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
