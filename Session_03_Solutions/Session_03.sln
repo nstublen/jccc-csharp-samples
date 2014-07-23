@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Guess", "Guess\01-Guess.csproj", "{7A1FF0A5-5EC5-48C5-9AE6-24940690B316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-NameSorter", "NameSorter\03-NameSorter.csproj", "{E9B52352-3D7D-4CAA-B56C-19C1A2E17CE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-PhoneFormatter", "PhoneFormatter\05-PhoneFormatter.csproj", "{76A72A9C-E0D4-4AD2-A8F7-95BEB4EBA047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-NumberSorter", "NumberSorter\06-NumberSorter.csproj", "{F08D7C4F-EB75-4EEA-8B20-6D75645B9043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-DatePicker", "DatePicker\04-DatePicker.csproj", "{51509D30-89AC-4561-8150-512F6F522C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-BinarySearch", "BinarySearch\02-BinarySearch.csproj", "{A294FA51-CBC5-4847-BDCA-2B8E67C745F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1FF0A5-5EC5-48C5-9AE6-24940690B316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1FF0A5-5EC5-48C5-9AE6-24940690B316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1FF0A5-5EC5-48C5-9AE6-24940690B316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1FF0A5-5EC5-48C5-9AE6-24940690B316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B52352-3D7D-4CAA-B56C-19C1A2E17CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B52352-3D7D-4CAA-B56C-19C1A2E17CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B52352-3D7D-4CAA-B56C-19C1A2E17CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B52352-3D7D-4CAA-B56C-19C1A2E17CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A72A9C-E0D4-4AD2-A8F7-95BEB4EBA047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A72A9C-E0D4-4AD2-A8F7-95BEB4EBA047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A72A9C-E0D4-4AD2-A8F7-95BEB4EBA047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A72A9C-E0D4-4AD2-A8F7-95BEB4EBA047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F08D7C4F-EB75-4EEA-8B20-6D75645B9043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08D7C4F-EB75-4EEA-8B20-6D75645B9043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08D7C4F-EB75-4EEA-8B20-6D75645B9043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08D7C4F-EB75-4EEA-8B20-6D75645B9043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51509D30-89AC-4561-8150-512F6F522C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51509D30-89AC-4561-8150-512F6F522C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51509D30-89AC-4561-8150-512F6F522C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51509D30-89AC-4561-8150-512F6F522C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A294FA51-CBC5-4847-BDCA-2B8E67C745F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A294FA51-CBC5-4847-BDCA-2B8E67C745F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A294FA51-CBC5-4847-BDCA-2B8E67C745F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A294FA51-CBC5-4847-BDCA-2B8E67C745F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
