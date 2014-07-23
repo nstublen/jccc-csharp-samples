@@ -20,7 +20,7 @@ namespace JCCC.Samples.EventSample
         private uint mWins;
         private uint mLosses;
 
-        // Constructors for the Team class
+        // Constructors for the SportsTeam class
 
         public SportsTeam()
         {
@@ -32,7 +32,7 @@ namespace JCCC.Samples.EventSample
             Losses = inLosses;
         }
 
-        // Properties for the Team class
+        // Properties for the SportsTeam class
 
         public uint GamesPlayed
         {
@@ -74,7 +74,7 @@ namespace JCCC.Samples.EventSample
             get { return (GamesPlayed != 0) ? (double)Wins / GamesPlayed : 0; }
         }
 
-        // Methods for the Team class
+        // Methods for the SportsTeam class
 
         public void LoseOneGame()
         {
